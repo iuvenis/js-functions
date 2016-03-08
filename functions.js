@@ -1,23 +1,33 @@
+x = 9;
+y= 3;
+
 /**
  * Converts a number a string.
  * @param {number} n
  * @return {string} the number as a string
  */
 
+function numberToString (num){
+return num.toString();
+}
 
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
-
+function increase (n){
+  return(n+1);
+}
 
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
-
+function decrease (n){
+  return(n-1);
+}
 
 /**
  * Adds two numbers.
@@ -25,7 +35,9 @@
  * @param {number} y
  * @return {number} the sum
  */
-
+function add (x, y){
+  return(x + y);
+}
 
 /**
  * Subtracts the second number from the first.
@@ -33,7 +45,9 @@
  * @param {number} y
  * @return {number} the difference
  */
-
+function subtract (x, y){
+  return(x - y);
+}
 
 /**
  * Multiplies two numbers.
@@ -41,6 +55,9 @@
  * @param {number} y
  * @return {number} the product
  */
+ function multiply (x , y){
+  return(x*y);
+ }
 
 
 /**
@@ -50,12 +67,19 @@
  * @return {number} the quotient
  */
 
+function divide (x, y){
+  return(x/y);
+}
 
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
+
+ function square (x){
+  return(x*x);
+ }
 
 
 /**
@@ -65,8 +89,32 @@
  * @param {number} x
  * @param {number} y
  * @return {number} the result
- */
 
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+
+ function calculate (string, x, y){
+  if string == "add" {
+    return (x "+" y = x+y);
+  }
+  else if string == "subtract" {
+    return (x - y);
+  }
+    else if string == "multiply" {
+    return (x * y);
+  }
+    else string == "divide" {
+    return (x / y);
+  }
+}
+
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~ ~ * ~
+*/
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -74,7 +122,13 @@
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
-
+function isGreaterThan (a, b){
+  if (a>b){
+    return true;
+  }
+  else
+    return false;
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -82,7 +136,13 @@
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+function isLessThan (a, b){
+  if (a<b){
+    return true;
+  }
+  else
+    return false;
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -90,23 +150,31 @@
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
-
-
+function areEqual (a, b){
+  if (a === b) {
+    return true;
+  }
+  else
+    return false;
+}
 /**
  * Returns the smallest value of two numbers.
  * @param {number} x
  * @param {number} y
  * @return {number} the smallest number
  */
-
-
+ function minimum(x, y) {
+ return Math.min(x, y);
+}
 /**
  * Returns the largest value of two numbers.
  * @param {number} x
  * @param {number} y
  * @return {number} the largest number
  */
-
+ function maximum(x, y) {
+ return Math.max(x, y);
+}
 
 /**
  * Returns true if `n` is even.
@@ -114,12 +182,29 @@
  * @return {boolean} the number is even
  */
 
+ function isEven(n) {
+  if (n%2 === 0) {
+    return true, "the number is even";
+  }
+  else {
+    return false;
+  }
+ }
+
 
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
+ function isOdd(n) {
+  if (n%2 !== 0) {
+    return true, "the number is odd";
+  }
+  else {
+    return false;
+  }
+ }
 
 
 /**
@@ -134,6 +219,25 @@
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade(score, total){
+  if (score/total*100 > 89) {
+    return "A";
+  }
+    else if (score/total*100 > 79) {
+    return "B";
+  }
+    else if (score/total*100 >= 70) {
+    return "C";
+  }
+    else if (score/total*100 > 59) {
+    return "D";
+  }
+    else if (score/total*100 < 60) {
+    return "F";
+  }
+}
+
+
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -143,6 +247,14 @@
  * @return {object} restaurant
  */
 
+function incrementReviews(restaurant) {
+  if (this.reviews >= 1) {
+    return (this.reviews +1 && restaurant);
+  }
+  else {
+    return (this.reviews = 1 && restaurant);
+  }
+}
 
 /**
  * Joins two strings with a space.
@@ -150,7 +262,9 @@
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
-
+function combine(word1, word2) {
+  return (word1 + " " + word2);
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -159,4 +273,8 @@
  * @param {number} radius
  * @return {object} circle
  */
+
+ function createCircle(radius) {
+  return (arc(Math.PI*radius) && "Area = " + .5(Math.PI*radius*radius) && "circumference = " + 2(Math.PI*2*radius));
+ }
 
